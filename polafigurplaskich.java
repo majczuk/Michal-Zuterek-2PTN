@@ -5,12 +5,12 @@ class polafigurplaskich{
 	public static void main(String [] a){
 		
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.println(" kwadrat - prostokat - exit ");
-		String wybor = sc.nextLine();
-		wybor.toUpperCase();
+			Scanner sc = new Scanner(System.in);
+			System.out.println(" kwadrat - prostokat - exit ");
+			String wybor = sc.nextLine();
+			wybor.toUpperCase();
 		
-		if(wybor.equals("kwadrat")){
+			if(wybor.equals("kwadrat")){
 			
 			int bok = 0;
 			System.out.println("wybrana opcja: kwadrat");
@@ -19,11 +19,8 @@ class polafigurplaskich{
 				bok = sc.nextInt();
 			}
 			int pole = bok*bok;
-			System.out.println("Pole = " + pole);
-			
-			
+			System.out.println("Pole = " + pole);			
 			String tekst = "Pole = " + pole;
-			
 			bok = bok-1;
 			for(int i=0;i<=bok;i++){
 				for(int j=0;j<=bok;j++){
@@ -35,20 +32,7 @@ class polafigurplaskich{
 				}
 				System.out.println();
 			}
-			
-			
-			
-			
-			File f = new File("kwadrat.txt");
-			try{
-				FileWriter fw = new FileWriter(f);
-				fw.write(tekst);
-				fw.close();
-			} catch(IOException e){
-				System.out.println("BLAD: "+e.toString());
-			}
-		}else if(wybor.equals("prostokat")){
-			
+			}else if(wybor.equals("prostokat")){			
 			int bok1=0;
 			int bok2=0;
 			System.out.println("wybrana opcja: prostokat");
@@ -59,13 +43,9 @@ class polafigurplaskich{
 			while (bok2 <=0){
 				System.out.println("Podaj 2 bok prostokatu: ");
 				bok2 = sc.nextInt();
-			}
-			
+			}			
 			int pole = bok1*bok2;
-			System.out.println("Pole = " + pole);
-			
-			
-			
+			System.out.println("Pole = " + pole);						
 			bok1 = bok1-1;
 			bok2 = bok2-1;
 			for(int i=0;i<=bok1;i++){
@@ -77,22 +57,11 @@ class polafigurplaskich{
 					}
 				}
 				System.out.println();
+			}												
+			}else if(wybor.equals("exit")){
+				System.out.println("elo");
+			}else{
+				System.out.println("blad");
 			}
-			
-			
-			File f = new File("prostokat.txt");
-			try{
-				FileWriter fw = new FileWriter(f);
-				fw.write(tekst);
-				fw.close();
-			} catch(IOException e){
-				System.out.println("blad: "+e.toString());
-			}
-			
-		}else if(wybor.equals("exit")){
-			System.out.println("elo");
-		}else{
-			System.out.println("blad");
 		}
 	}
-}
