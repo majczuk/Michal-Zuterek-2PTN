@@ -28,8 +28,6 @@ public class kalkulator extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelMain = new javax.swing.JPanel();
-        mz_jScrollPane1 = new javax.swing.JScrollPane();
-        mz_jTextArea = new javax.swing.JTextArea();
         mz_jButton8 = new javax.swing.JButton();
         mz_jButton9 = new javax.swing.JButton();
         mz_jButton7 = new javax.swing.JButton();
@@ -46,44 +44,110 @@ public class kalkulator extends javax.swing.JFrame {
         mz_jButton0 = new javax.swing.JButton();
         mz_jButtonPrzecinek = new javax.swing.JButton();
         mz_jButtonKoniec = new javax.swing.JButton();
+        mz_jTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        mz_jTextArea.setColumns(20);
-        mz_jTextArea.setRows(5);
-        mz_jScrollPane1.setViewportView(mz_jTextArea);
+        jPanelMain.setBackground(new java.awt.Color(51, 0, 51));
 
         mz_jButton8.setText("8");
+        mz_jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButton8ActionPerformed(evt);
+            }
+        });
 
         mz_jButton9.setText("9");
+        mz_jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButton9ActionPerformed(evt);
+            }
+        });
 
         mz_jButton7.setText("7");
+        mz_jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButton7ActionPerformed(evt);
+            }
+        });
 
         mz_jButton4.setText("4");
+        mz_jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButton4ActionPerformed(evt);
+            }
+        });
 
         mz_jButtonX.setText("x");
 
         mz_jButton6.setText("6");
+        mz_jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButton6ActionPerformed(evt);
+            }
+        });
 
         mz_jButtonMinus.setText("-");
+        mz_jButtonMinus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButtonMinusActionPerformed(evt);
+            }
+        });
 
         mz_jButton5.setText("5");
+        mz_jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButton5ActionPerformed(evt);
+            }
+        });
 
         mz_jButton1.setText("1");
+        mz_jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButton1ActionPerformed(evt);
+            }
+        });
 
         mz_jButton2.setText("2");
+        mz_jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButton2ActionPerformed(evt);
+            }
+        });
 
         mz_jButton3.setText("3");
+        mz_jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButton3ActionPerformed(evt);
+            }
+        });
 
         mz_jButtonPlus.setText("+");
+        mz_jButtonPlus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButtonPlusActionPerformed(evt);
+            }
+        });
 
         mz_jButtonDzielenie.setText("/");
 
         mz_jButton0.setText("0");
+        mz_jButton0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButton0ActionPerformed(evt);
+            }
+        });
 
         mz_jButtonPrzecinek.setText(",");
 
         mz_jButtonKoniec.setText("=");
+        mz_jButtonKoniec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mz_jButtonKoniecActionPerformed(evt);
+            }
+        });
+
+        mz_jTextField.setEditable(false);
 
         javax.swing.GroupLayout jPanelMainLayout = new javax.swing.GroupLayout(jPanelMain);
         jPanelMain.setLayout(jPanelMainLayout);
@@ -91,46 +155,47 @@ public class kalkulator extends javax.swing.JFrame {
             jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMainLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(mz_jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mz_jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mz_jButton7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mz_jButtonKoniec, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE))
+                .addGap(10, 10, 10)
+                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanelMainLayout.createSequentialGroup()
-                        .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(mz_jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(mz_jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(mz_jButton7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(mz_jButtonKoniec, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE))
-                        .addGap(10, 10, 10)
                         .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanelMainLayout.createSequentialGroup()
-                                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(mz_jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
-                                    .addComponent(mz_jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(mz_jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(mz_jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanelMainLayout.createSequentialGroup()
-                                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(mz_jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
-                                    .addComponent(mz_jButton0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(mz_jButtonPrzecinek, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(mz_jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(18, 18, 18)
+                            .addComponent(mz_jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+                            .addComponent(mz_jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(mz_jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(mz_jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelMainLayout.createSequentialGroup()
                         .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(mz_jButtonPlus, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
-                            .addComponent(mz_jButtonDzielenie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(mz_jButtonMinus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(mz_jButtonX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(mz_jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                            .addComponent(mz_jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                            .addComponent(mz_jButton0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(mz_jButtonPrzecinek, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(mz_jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(mz_jButtonPlus, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                    .addComponent(mz_jButtonDzielenie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mz_jButtonMinus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mz_jButtonX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
+            .addGroup(jPanelMainLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(mz_jTextField)
+                .addContainerGap())
         );
         jPanelMainLayout.setVerticalGroup(
             jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMainLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mz_jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(19, 19, 19)
+                .addComponent(mz_jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(mz_jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(mz_jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -170,6 +235,86 @@ public class kalkulator extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    String liczba = "";
+    private void mz_jButton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButton0ActionPerformed
+        mz_jTextField.setText(liczba+"0");
+        liczba=mz_jTextField.getText();
+    }//GEN-LAST:event_mz_jButton0ActionPerformed
+
+    private void mz_jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButton1ActionPerformed
+        mz_jTextField.setText(liczba+"1");
+        liczba=mz_jTextField.getText();
+    }//GEN-LAST:event_mz_jButton1ActionPerformed
+
+    private void mz_jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButton2ActionPerformed
+        mz_jTextField.setText(liczba+"2");
+        liczba=mz_jTextField.getText();
+    }//GEN-LAST:event_mz_jButton2ActionPerformed
+
+    private void mz_jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButton3ActionPerformed
+        mz_jTextField.setText(liczba+"3");
+        liczba=mz_jTextField.getText();
+    }//GEN-LAST:event_mz_jButton3ActionPerformed
+
+    private void mz_jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButton4ActionPerformed
+        mz_jTextField.setText(liczba+"4");
+        liczba=mz_jTextField.getText();
+    }//GEN-LAST:event_mz_jButton4ActionPerformed
+
+    private void mz_jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButton5ActionPerformed
+        mz_jTextField.setText(liczba+"5");
+        liczba=mz_jTextField.getText();
+    }//GEN-LAST:event_mz_jButton5ActionPerformed
+
+    private void mz_jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButton6ActionPerformed
+        mz_jTextField.setText(liczba+"6");
+        liczba=mz_jTextField.getText();
+    }//GEN-LAST:event_mz_jButton6ActionPerformed
+
+    private void mz_jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButton7ActionPerformed
+        mz_jTextField.setText(liczba+"7");
+        liczba=mz_jTextField.getText();
+    }//GEN-LAST:event_mz_jButton7ActionPerformed
+
+    private void mz_jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButton8ActionPerformed
+        mz_jTextField.setText(liczba+"8");
+        liczba=mz_jTextField.getText();
+    }//GEN-LAST:event_mz_jButton8ActionPerformed
+
+    private void mz_jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButton9ActionPerformed
+        mz_jTextField.setText(liczba+"9");
+        liczba=mz_jTextField.getText();
+    }//GEN-LAST:event_mz_jButton9ActionPerformed
+    int liczba1;
+    int liczba2;
+    String sign = "";
+    
+    private void mz_jButtonPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButtonPlusActionPerformed
+        sign = "+";
+        liczba1 = Integer.parseInt(liczba);
+        liczba ="";
+    }//GEN-LAST:event_mz_jButtonPlusActionPerformed
+
+    private void mz_jButtonMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButtonMinusActionPerformed
+        sign = "-";
+        liczba1 = Integer.parseInt(liczba);
+        liczba ="";
+    }//GEN-LAST:event_mz_jButtonMinusActionPerformed
+
+    private void mz_jButtonKoniecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mz_jButtonKoniecActionPerformed
+        liczba2 = Integer.parseInt(liczba);
+        if(sign.equals("+")){
+            int wynik = liczba1 + liczba2;
+            String tekst = String.valueOf(wynik);
+            mz_jTextField.setText(tekst);
+            liczba = "";
+        }else if(sign.equals("-")){
+            int wynik = liczba1 - liczba2;
+            String tekst = String.valueOf(wynik);
+            mz_jTextField.setText(tekst);
+            liczba = "";
+        }
+    }//GEN-LAST:event_mz_jButtonKoniecActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,7 +369,6 @@ public class kalkulator extends javax.swing.JFrame {
     private javax.swing.JButton mz_jButtonPlus;
     private javax.swing.JButton mz_jButtonPrzecinek;
     private javax.swing.JButton mz_jButtonX;
-    private javax.swing.JScrollPane mz_jScrollPane1;
-    private javax.swing.JTextArea mz_jTextArea;
+    private javax.swing.JTextField mz_jTextField;
     // End of variables declaration//GEN-END:variables
 }
