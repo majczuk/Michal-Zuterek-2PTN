@@ -5,7 +5,9 @@
  */
 package com.mycompany.kalkulator;
 
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,6 +17,8 @@ import javax.swing.JOptionPane;
 public class kalkulator extends javax.swing.JFrame {
 
     private DateTimeFormatter DateTimeFormatter;
+    private DateTimeFormatter formatter;
+    private CharSequence date;
 
     /**
      * Creates new form kalkulator
@@ -364,7 +368,12 @@ public class kalkulator extends javax.swing.JFrame {
         // narzedzie pozwalajace na zamiane wprowadzonego tekstu na date
         DateTimeFormatter = DateTimeFormatter.ofPattern("dd MM yyyy");
         String data = JOptionPane.showInputDialog("Wprowadz date w formacie dd mm yyyy np: 01 02 2021");
-        System.out.println(data);
+        //System.out.println(data);
+        LocalDate DateNow = LocalDate.now();
+        LocalDate DateInput = LocalDate.parse(data, formatter); // zrobienie LocalDate z tekstu dzieki formatter
+        //System.out.println(DateNow+" "+DateInput);
+        long days = ChronoUnit.DAYS.between(DateInput, DateNow);
+        //System.out.println("Ilosc dni miedzy datami"+days);
     }//GEN-LAST:event_jMenuDniMiedzyDatamiActionPerformed
 
     /**
