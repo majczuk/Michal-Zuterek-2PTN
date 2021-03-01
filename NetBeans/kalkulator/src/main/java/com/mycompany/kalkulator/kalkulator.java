@@ -5,11 +5,16 @@
  */
 package com.mycompany.kalkulator;
 
+import java.time.format.DateTimeFormatter;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Michał_pc
  */
 public class kalkulator extends javax.swing.JFrame {
+
+    private DateTimeFormatter DateTimeFormatter;
 
     /**
      * Creates new form kalkulator
@@ -46,8 +51,11 @@ public class kalkulator extends javax.swing.JFrame {
         mz_jButtonKoniec = new javax.swing.JButton();
         mz_jTextField = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jMenuFile = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuEdit = new javax.swing.JMenu();
+        jMenuTools = new javax.swing.JMenu();
+        jMenuDniMiedzyDatami = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -225,11 +233,32 @@ public class kalkulator extends javax.swing.JFrame {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        jMenuFile.setText("File");
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        jMenuItem1.setText("Exit");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenuFile.add(jMenuItem1);
+
+        jMenuBar1.add(jMenuFile);
+
+        jMenuEdit.setText("Edit");
+        jMenuBar1.add(jMenuEdit);
+
+        jMenuTools.setText("Tools");
+
+        jMenuDniMiedzyDatami.setText("Daty");
+        jMenuDniMiedzyDatami.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuDniMiedzyDatamiActionPerformed(evt);
+            }
+        });
+        jMenuTools.add(jMenuDniMiedzyDatami);
+
+        jMenuBar1.add(jMenuTools);
 
         setJMenuBar(jMenuBar1);
 
@@ -327,6 +356,17 @@ public class kalkulator extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_mz_jButtonKoniecActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuDniMiedzyDatamiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuDniMiedzyDatamiActionPerformed
+        // narzedzie pozwalajace na zamiane wprowadzonego tekstu na date
+        DateTimeFormatter = DateTimeFormatter.ofPattern("dd MM yyyy");
+        String data = JOptionPane.showInputDialog("Wprowadz date w formacie dd mm yyyy np: 01 02 2021");
+        System.out.println(data);
+    }//GEN-LAST:event_jMenuDniMiedzyDatamiActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -363,9 +403,12 @@ public class kalkulator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuDniMiedzyDatami;
+    private javax.swing.JMenu jMenuEdit;
+    private javax.swing.JMenu jMenuFile;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenu jMenuTools;
     private javax.swing.JPanel jPanelMain;
     private javax.swing.JButton mz_jButton0;
     private javax.swing.JButton mz_jButton1;
