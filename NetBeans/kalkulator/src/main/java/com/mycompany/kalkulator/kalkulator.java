@@ -369,11 +369,14 @@ public class kalkulator extends javax.swing.JFrame {
         DateTimeFormatter = DateTimeFormatter.ofPattern("dd MM yyyy");
         String data = JOptionPane.showInputDialog("Wprowadz date w formacie dd mm yyyy np: 01 02 2021");
         //System.out.println(data);
+        if(data != null && data.length()>1){
         LocalDate DateNow = LocalDate.now();
         LocalDate DateInput = LocalDate.parse(data, formatter); // zrobienie LocalDate z tekstu dzieki formatter
         //System.out.println(DateNow+" "+DateInput);
         long days = ChronoUnit.DAYS.between(DateInput, DateNow);
         //System.out.println("Ilosc dni miedzy datami"+days);
+        JOptionPane.showMessageDialog(rootPane,""+days,"ilosc dni",HEIGHT);
+        }
     }//GEN-LAST:event_jMenuDniMiedzyDatamiActionPerformed
 
     /**
