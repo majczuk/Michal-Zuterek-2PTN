@@ -375,7 +375,7 @@ public class kalkulator extends javax.swing.JFrame {
         //System.out.println(DateNow+" "+DateInput);
         long days = ChronoUnit.DAYS.between(DateInput, DateNow);
         //System.out.println("Ilosc dni miedzy datami"+days);
-        JOptionPane.showMessageDialog(rootPane,""+days,"ilosc dni",HEIGHT);
+        
         }
     }//GEN-LAST:event_jMenuDniMiedzyDatamiActionPerformed
 
