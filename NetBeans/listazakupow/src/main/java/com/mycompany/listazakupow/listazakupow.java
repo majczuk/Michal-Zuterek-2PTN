@@ -63,6 +63,12 @@ public class listazakupow extends javax.swing.JFrame {
 
         jLabelWartosc.setText("Podaj wartosc");
 
+        jTextFieldWartosc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldWartoscActionPerformed(evt);
+            }
+        });
+
         jComboBoxTowar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabelTowar.setText("Typ zakupionego towaru");
@@ -205,6 +211,10 @@ public class listazakupow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTextFieldWartoscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldWartoscActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldWartoscActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -271,18 +281,21 @@ public class listazakupow extends javax.swing.JFrame {
             public void keyTyped(KeyEvent e) {
                 char ch = e.getKeyChar();
                 if(ch == '0'|| ch == '1'|| ch == '2'||ch == '3'||ch == '4'||ch == '5'||ch == '6'||ch == '7'||ch == '8'||ch == '9'){
+                    jTextFieldWartosc.setEditable(true);
                     System.out.println("NACISNIETO CYFRE"+ch);
+                }else{
+                    jTextFieldWartosc.setEditable(false);
                 }
             }
 
             @Override
             public void keyPressed(KeyEvent e) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                
             }
 
             @Override
             public void keyReleased(KeyEvent e) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                
             }
         }
         );
@@ -312,7 +325,4 @@ public class listazakupow extends javax.swing.JFrame {
     private javax.swing.JToolBar jToolBarWprowadzanie;
     // End of variables declaration//GEN-END:variables
 
-    private void addKeyListenerTojTextFieldWpisz() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}
+    
