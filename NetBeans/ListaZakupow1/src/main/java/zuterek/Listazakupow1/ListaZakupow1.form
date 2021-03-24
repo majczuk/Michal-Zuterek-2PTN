@@ -52,71 +52,72 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JToolBar" name="jToolBarWprowadzanie">
+            <Container class="javax.swing.JToolBar" name="jToolBarWprowadz">
               <Properties>
-                <Property name="floatable" type="boolean" value="false"/>
                 <Property name="rollover" type="boolean" value="true"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Wprowadz zakupy">
-                    <Property name="tabTitle" type="java.lang.String" value="Wprowadz zakupy"/>
+                  <JTabbedPaneConstraints tabName="Wprowadzanie zakupow">
+                    <Property name="tabTitle" type="java.lang.String" value="Wprowadzanie zakupow"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="jPanelWprowadzanie">
+                <Container class="javax.swing.JPanel" name="jPanelWprowadz">
 
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextFieldWpisz" alignment="0" min="-2" pref="164" max="-2" attributes="0"/>
-                                          <Component id="jLabelWpisz" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextFieldWartosc" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
-                                          <Component id="jLabelWartosc" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                      <Component id="jLabelTextArea" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane" min="-2" pref="247" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jComboBoxTowar" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
-                                          <Component id="jLabelTowar" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jLabelData" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldData" max="32767" attributes="0"/>
-                                          <Component id="jButtonZapisz" alignment="0" pref="85" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabelDzisiaj" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldDzisiaj" max="32767" attributes="0"/>
-                                  </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabelDzisiejsze" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabelTydzien" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextFieldTydzien" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabelWpisz" min="-2" pref="97" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                                              <Component id="jLabelWartosc" min="-2" pref="90" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jTextFieldWpisz" min="-2" pref="170" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldWartosc" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jComboBoxTowar" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                                  <Component id="jLabelTowar" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="jLabelData" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jTextFieldData" max="32767" attributes="0"/>
+                                                  <Component id="jButtonZapisz" alignment="0" pref="70" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabelWydatki1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelWydatki2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jTextFieldWydatki2" max="32767" attributes="0"/>
+                                                  <Component id="jTextFieldWydatki1" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="38" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -137,34 +138,26 @@
                                   <Component id="jComboBoxTowar" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldData" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButtonZapisz" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jLabelDzisiejsze" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jButtonZapisz" min="-2" pref="41" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabelTextArea" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jScrollPane" pref="445" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane1" min="-2" pref="165" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabelDzisiaj" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldDzisiaj" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelWydatki1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldWydatki1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabelTydzien" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldTydzien" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelWydatki2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldWydatki2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -172,7 +165,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabelWpisz">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Wpisz co kupi&#x142;e&#x15b;"/>
+                        <Property name="text" type="java.lang.String" value="Wpisz co kupi&#x142;e&#x15b;: "/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextFieldWpisz">
@@ -183,9 +176,6 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextFieldWartosc">
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldWartoscActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxTowar">
                       <Properties>
@@ -209,24 +199,29 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelData">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Data zakupu"/>
+                        <Property name="text" type="java.lang.String" value="Data"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextFieldData">
                     </Component>
                     <Component class="javax.swing.JButton" name="jButtonZapisz">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="ZAPISZ"/>
+                        <Property name="text" type="java.lang.String" value="zapisz"/>
                       </Properties>
                     </Component>
-                    <Container class="javax.swing.JScrollPane" name="jScrollPane">
+                    <Component class="javax.swing.JLabel" name="jLabelDzisiejsze">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Dzisiejsze zakupy"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
                       <AuxValues>
                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                       </AuxValues>
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextArea" name="jTextAreaZakupy">
+                        <Component class="javax.swing.JTextArea" name="jTextArea">
                           <Properties>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
@@ -234,24 +229,19 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="jLabelTextArea">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Dzisiejsze zakupy"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDzisiaj">
+                    <Component class="javax.swing.JLabel" name="jLabelWydatki1">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Wydatki z dzisiaj"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelTydzien">
+                    <Component class="javax.swing.JTextField" name="jTextFieldWydatki1">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelWydatki2">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Wydatki z tygodnia"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldDzisiaj">
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldTydzien">
+                    <Component class="javax.swing.JTextField" name="jTextFieldWydatki2">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -259,7 +249,6 @@
             </Container>
             <Container class="javax.swing.JToolBar" name="jToolBarLista">
               <Properties>
-                <Property name="floatable" type="boolean" value="false"/>
                 <Property name="rollover" type="boolean" value="true"/>
               </Properties>
               <Constraints>
@@ -271,23 +260,6 @@
               </Constraints>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
-              <SubComponents>
-                <Container class="javax.swing.JPanel" name="jPanelLista">
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="609" max="32767" attributes="0"/>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="619" max="32767" attributes="0"/>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                </Container>
-              </SubComponents>
             </Container>
           </SubComponents>
         </Container>
