@@ -4,6 +4,9 @@ package pl.home.local.adams.listazakupow;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -366,14 +369,17 @@ public class ListaZakupow extends javax.swing.JFrame{
     }
     
     private void filljCBProducts(){
-        ArticleTypeUtils atu = new ArticleTypeUtils();
-        //TODO read procucts from file!!!
         jCBProducts.removeAllItems();
-        jCBProducts.addItem("");
-        jCBProducts.addItem("Żywność");
-        jCBProducts.addItem("Napoje");
-        jCBProducts.addItem("Owoce");
-        jCBProducts.addItem("Warzywa");
+        try {
+            Scanner sc = new Scanner(new File("produkty.txt"));
+            while(sc.hasNext()){
+                String item = sc.nextLine();
+                System.out.println(item);
+                jCBProducts.addItem(item);
+            }
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex.toString());
+        }
     }
 
    
