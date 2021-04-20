@@ -5,6 +5,9 @@
  */
 package zuterek.rejestracja;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 /**
  *
  * @author Michał_pc
@@ -16,6 +19,8 @@ public class Rejestracja extends javax.swing.JFrame {
      */
     public Rejestracja() {
         initComponents();
+        addKeyListenerTojTFLogin();
+        addKeyListenerTojTFLoginRejestracja();
     }
 
     /**
@@ -196,6 +201,55 @@ public class Rejestracja extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTFLoginRejestracjaActionPerformed
 
+    private void addKeyListenerTojTFLogin(){
+        jTFLogin.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                String temp = jTFLogin.getText();
+                char ch = e.getKeyChar();
+                if((ch >= 'a' && ch <= 'z') && (temp.length()<=20)){
+                    jTFLogin.setEditable(true);
+                }else{
+                    jTFLogin.setEditable(false);
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                
+            }
+        });
+    }
+    
+    private void addKeyListenerTojTFLoginRejestracja(){
+        jTFLoginRejestracja.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                String temp = jTFLogin.getText();
+                char ch = e.getKeyChar();
+                if((ch >= 'a' && ch <= 'z') && (temp.length()<=20) && ( ch == KeyEvent.VK_BACK_SPACE)){
+                    jTFLogin.setEditable(true);
+                }else{
+                    jTFLogin.setEditable(false);
+                } 
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                
+            }
+        });
+    }
     /**
      * @param args the command line arguments
      */
