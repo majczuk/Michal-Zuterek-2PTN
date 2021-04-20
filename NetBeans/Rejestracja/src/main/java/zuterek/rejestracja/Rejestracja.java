@@ -232,7 +232,7 @@ public class Rejestracja extends javax.swing.JFrame {
             public void keyTyped(KeyEvent e) {
                 String temp = jTFLogin.getText();
                 char ch = e.getKeyChar();
-                if((ch >= 'a' && ch <= 'z') && (temp.length()<=20))){
+                if((ch >= 'a' && ch <= 'z') && (temp.length()<=20)){
                     jTFLoginRejestracja.setEditable(true);
                 }else{
                     jTFLoginRejestracja.setEditable(false);
