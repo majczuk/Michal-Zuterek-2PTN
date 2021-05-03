@@ -207,7 +207,7 @@ public class Rejestracja extends javax.swing.JFrame {
             public void keyTyped(KeyEvent e) {
                 String temp = jTFLogin.getText();
                 char ch = e.getKeyChar();
-                if((ch >= 'a' && ch <= 'z') && (temp.length()<=20)){
+                if((ch >= 'a' && ch <= 'z') && (temp.length() <=20 ) && (ch == KeyEvent.VK_BACK_SPACE)) {
                     jTFLogin.setEditable(true);
                 }else{
                     jTFLogin.setEditable(false);
@@ -230,13 +230,13 @@ public class Rejestracja extends javax.swing.JFrame {
         jTFLoginRejestracja.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                String temp = jTFLogin.getText();
+                String temp = jTFLoginRejestracja.getText();
                 char ch = e.getKeyChar();
-                if((ch >= 'a' && ch <= 'z') && (temp.length()<=20)){
+                if((ch >= 'a' && ch <= 'z') && (temp.length() <=20 ) && (ch == KeyEvent.VK_BACK_SPACE)) {
                     jTFLoginRejestracja.setEditable(true);
                 }else{
                     jTFLoginRejestracja.setEditable(false);
-                } 
+                }
             }
 
             @Override
@@ -250,6 +250,37 @@ public class Rejestracja extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void addKeyListenerToTFEmail(){
+        jTFEmail.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char ch = e.getKeyChar();
+                if(  (ch >= '0'  && ch <= '9'  || ch == KeyEvent.VK_BACK_SPACE) && ch >= '0'  && 
+                        (ch > 'a' && ch < 'z')){
+                    jTFEmail.setEditable(true); 
+                    if( ch == '@'){
+                    if(ch > 'a' && ch < 'z'){
+                        jTFEmail.setEditable(true);
+                    }
+                }
+                }else{
+                    jTFEmail.setEditable(false);
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                
+            }
+        });
+    }
+    
     /**
      * @param args the command line arguments
      */
